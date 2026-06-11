@@ -1,0 +1,77 @@
+---
+title: "Analisis Tren Konsumsi Digital Indonesia 2024"
+date: "2024-11-15"
+description: "Eksplorasi data konsumsi internet dan media digital masyarakat Indonesia menggunakan R, dengan visualisasi interaktif menggunakan ggplot2 dan Shiny."
+tags: ["data analysis", "indonesia", "digital"]
+featured: true
+status: "completed"
+tech: ["R", "ggplot2", "tidyverse", "Shiny"]
+repoUrl: "https://github.com/username/digital-consumption-id"
+demoUrl: ""
+---
+
+## Latar Belakang
+
+Indonesia adalah salah satu pasar digital yang pertumbuhannya paling cepat di Asia Tenggara. Tapi seberapa banyak yang kita benar-benar tahu tentang *pola* konsumsinya?
+
+Proyek ini dimulai dari rasa penasaran sederhana: **apa yang orang Indonesia konsumsi secara digital, dan bagaimana trennya berubah?**
+
+## Data yang Digunakan
+
+Data diambil dari beberapa sumber publik:
+- Survei APJII 2023 (Asosiasi Penyelenggara Jasa Internet Indonesia)
+- Data Badan Pusat Statistik tentang akses internet rumah tangga
+- Laporan We Are Social 2024
+
+## Proses Analisis
+
+### 1. Pembersihan Data
+
+```r
+library(tidyverse)
+library(janitor)
+
+raw_data <- read_csv("data/apjii_2023.csv") |>
+  clean_names() |>
+  filter(!is.na(provinsi)) |>
+  mutate(
+    penetrasi_pct = penetrasi_internet / populasi * 100,
+    region = case_when(
+      str_detect(pulau, "Jawa") ~ "Jawa",
+      str_detect(pulau, "Sumatera") ~ "Sumatera",
+      TRUE ~ "Luar Jawa-Sumatera"
+    )
+  )
+```
+
+### 2. Visualisasi Utama
+
+Saya membuat beberapa visualisasi menggunakan ggplot2:
+
+```r
+ggplot(raw_data, aes(x = reorder(provinsi, penetrasi_pct), 
+                     y = penetrasi_pct,
+                     fill = region)) +
+  geom_col() +
+  scale_fill_manual(values = c("#E85D26", "#3A3A37", "#AEAEA8")) +
+  coord_flip() +
+  labs(title = "Penetrasi Internet per Provinsi",
+       x = NULL, y = "Penetrasi (%)") +
+  theme_minimal(base_family = "Inter")
+```
+
+<Callout type="tip">
+Tip: Gunakan `reorder()` di dalam `aes()` untuk mengurutkan bar chart secara otomatis berdasarkan nilai.
+</Callout>
+
+## Temuan Utama
+
+1. **Jawa mendominasi** — 57% pengguna internet Indonesia ada di Pulau Jawa, meski populasinya "hanya" 56% dari total nasional.
+2. **Pertumbuhan tercepat di luar Jawa** — Kalimantan dan Papua menunjukkan pertumbuhan penetrasi tertinggi (YoY +8-12%).
+3. **Mobile-first bukan hanya tren** — 96% pengguna internet mengakses lewat smartphone. Laptop/PC hanya 28%.
+
+## Refleksi
+
+Ini proyek pertama saya yang full-cycle menggunakan R — dari raw data sampai visualisasi publikasi. Banyak yang saya pelajari, terutama tentang data cleaning dengan `tidyverse` dan presentasi visual dengan `ggplot2`.
+
+Yang paling menantang: menggabungkan data dari sumber yang berbeda dengan format yang tidak konsisten. Itulah kenapa 60% waktu proyek habis untuk data cleaning, bukan analisisnya.

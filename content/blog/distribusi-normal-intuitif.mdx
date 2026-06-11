@@ -1,0 +1,59 @@
+---
+title: "Distribusi Normal: Intuitif Tanpa Rumus"
+date: "2025-05-20"
+description: "Kenapa distribusi normal muncul di mana-mana? Penjelasan intuitif tanpa perlu rumus matematika yang menakutkan."
+tags: ["statistika", "belajar", "probabilitas"]
+featured: false
+---
+
+Kalau kamu pernah buka buku statistika dan langsung ketemu rumus ini:
+
+<Math>f(x) = (1 / σ√2π) · e^(−(x−μ)²/2σ²)</Math>
+
+...dan langsung menutup bukunya, kamu tidak sendirian.
+
+Tapi sebenarnya, ide di balik distribusi normal jauh lebih sederhana dari rumusnya.
+
+## Bayangkan lempar koin 1000 kali
+
+Ambil koin. Lempar 10 kali. Hitung berapa kali muncul *heads*. Catat. Ulangi percobaan ini 1000 kali.
+
+Hasil yang paling sering muncul? Sekitar 5 heads. Hasil 4 atau 6 juga cukup sering. Tapi hasil 0 heads atau 10 heads? Sangat jarang.
+
+Kalau kamu gambar distribusinya, hasilnya akan berbentuk **lonceng** — tinggi di tengah, rendah di tepi.
+
+Itu distribusi normal.
+
+## Kenapa lonceng ini muncul di mana-mana?
+
+Ada teorema matematis yang disebut **Central Limit Theorem** (CLT). Intinya:
+
+> Kalau kamu menjumlahkan banyak variabel acak yang independen, hasilnya akan mendekati distribusi normal — terlepas dari distribusi aslinya.
+
+Ini sebabnya tinggi badan manusia, nilai ujian di kelas besar, error dalam pengukuran, bahkan harga saham di jangka pendek — semuanya cenderung berdistribusi normal.
+
+<Callout type="info">
+CLT adalah alasan kenapa statistika bisa bekerja di dunia nyata. Kita tidak perlu tahu distribusi asli data — kalau sampelnya cukup besar, kita bisa berasumsi normalitas.
+</Callout>
+
+## Dua parameter yang perlu kamu tahu
+
+Distribusi normal hanya butuh dua angka:
+
+- **μ (mu)** — rata-rata. Di mana puncak loncengnya.
+- **σ (sigma)** — standar deviasi. Seberapa "lebar" loncengnya.
+
+Lonceng sempit = data cenderung mengumpul di tengah. Lonceng lebar = data lebih tersebar.
+
+## Implikasinya untuk analisis data
+
+Kalau kamu tahu data kamu berdistribusi normal, banyak hal yang bisa kamu simpulkan:
+- ~68% data ada dalam jarak 1σ dari rata-rata
+- ~95% data ada dalam jarak 2σ
+- ~99.7% data ada dalam jarak 3σ
+
+Ini yang disebut **aturan 68-95-99.7**, dan ini salah satu alat paling berguna dalam statistika deskriptif.
+
+---
+
+Di tulisan berikutnya, saya akan bahas bagaimana menguji apakah data kamu *benar-benar* normal menggunakan R — dengan visualisasi dan test statistik.
