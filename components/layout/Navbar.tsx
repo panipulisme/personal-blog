@@ -27,7 +27,7 @@ export function Navbar() {
           href="/"
           className="text-[15px] font-medium tracking-tight text-ink-900 dark:text-ink-50 hover:opacity-80 transition-opacity"
         >
-          nama<span className="text-accent">.</span>dev
+          panipulisme<span className="text-accent">.</span>dev
         </Link>
 
         {/* Desktop links */}
