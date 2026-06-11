@@ -19,7 +19,7 @@ export default function Home() {
         </p>
         <h1 className="text-[32px] sm:text-[40px] font-medium text-ink-900 dark:text-ink-50 leading-tight mb-4 tracking-tight">
           Halo, saya{" "}
-          <span className="text-accent">Nama Kamu.</span>
+          <span className="text-accent">Syaiful.</span>
         </h1>
         <p className="text-[16px] text-ink-500 dark:text-ink-400 leading-relaxed max-w-xl mb-6">
           Ini adalah ruang berpikir saya — catatan perjalanan belajar statistika dan machine learning,
