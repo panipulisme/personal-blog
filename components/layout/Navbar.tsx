@@ -22,7 +22,6 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 bg-ink-50/90 dark:bg-ink-950/90 backdrop-blur-sm border-b border-ink-100 dark:border-ink-800">
       <nav className="max-w-4xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
-        {/* Logo */}
         <Link
           href="/"
           className="text-[15px] font-medium tracking-tight text-ink-900 dark:text-ink-50 hover:opacity-80 transition-opacity"
@@ -30,7 +29,6 @@ export function Navbar() {
           panipulisme<span className="text-accent">.</span>dev
         </Link>
 
-        {/* Desktop links */}
         <div className="hidden sm:flex items-center gap-1">
           {navLinks.slice(1).map((link) => {
             const active =
@@ -54,7 +52,6 @@ export function Navbar() {
           })}
         </div>
 
-        {/* Mobile hamburger */}
         <button
           className="sm:hidden p-2 text-ink-500 hover:text-ink-800 dark:hover:text-ink-200"
           onClick={() => setOpen(!open)}
@@ -64,7 +61,6 @@ export function Navbar() {
         </button>
       </nav>
 
-      {/* Mobile menu */}
       {open && (
         <div className="sm:hidden border-t border-ink-100 dark:border-ink-800 bg-ink-50 dark:bg-ink-950 px-4 py-3 flex flex-col gap-1">
           {navLinks.map((link) => {
@@ -93,3 +89,5 @@ export function Navbar() {
     </header>
   );
 }
+
+export default Navbar;
