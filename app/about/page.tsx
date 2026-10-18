@@ -43,7 +43,7 @@ export default function AboutPage() {
         <p>
           Di sini saya menulis tentang apa yang sedang saya pelajari, opini saya tentang berbagai hal,
           proyek data yang sedang saya kerjakan, dan sesekali cerita pendek. Semua konten
-          bebas dibaca dan disebarluaskan — ilmu harusnya gratis, <Italic>gak, sih?</Italic>.
+          bebas dibaca dan disebarluaskan — ilmu harusnya gratis, <Italic>gak, sih?</Italic>
         </p>
       </div>
 
