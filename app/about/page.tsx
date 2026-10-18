@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mail, Github, BookOpen, Code2, TrendingUp } from "lucide-react";
+import { Mail, Github, BookOpen, Code2, TrendingUp, Italic } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Tentang",
@@ -30,20 +30,20 @@ export default function AboutPage() {
       {/* Bio */}
       <div className="prose prose-ink dark:prose-invert max-w-none mb-10 text-[15px] leading-relaxed">
         <p>
-          Halo! Saya seorang <strong>digital marketing staff</strong> yang sedang dalam perjalanan
+          Halo! Saya seorang <strong>digital marketing specialist</strong> yang sedang dalam perjalanan
           panjang belajar statistika dan machine learning. Saat ini sedang mengambil kembali
           gelar sarjana di jurusan Statistika lewat Universitas Terbuka,
           sambil mempersiapkan diri untuk S2 Computational Statistics & Machine Learning.
         </p>
         <p>
-          Blog ini lahir dari keputusan untuk <em>keluar dari sosial media</em> — LinkedIn dan Instagram.
+          Blog ini lahir dari keputusan untuk <em>keluar dari sosial media</em> — khususnya LinkedIn dan Instagram.
           Saya merasa dokumentasi perjalanan belajar saya lebih bermakna kalau tidak dikontrol
           oleh algoritma yang menentukan siapa yang bisa melihatnya.
         </p>
         <p>
           Di sini saya menulis tentang apa yang sedang saya pelajari, opini saya tentang berbagai hal,
           proyek data yang sedang saya kerjakan, dan sesekali cerita pendek. Semua konten
-          bebas dibaca dan disebarluaskan — ilmu harusnya gratis.
+          bebas dibaca dan disebarluaskan — ilmu harusnya gratis, <Italic>gak, sih?</Italic>.
         </p>
       </div>
 
