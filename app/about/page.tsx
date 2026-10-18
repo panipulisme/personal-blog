@@ -96,20 +96,20 @@ export default function AboutPage() {
         </h2>
         <div className="space-y-3">
           <a
-            href="mailto:kamu@email.com"
+            href="mailto:msyaifulaldiansyah@gmail.com"
             className="flex items-center gap-3 text-[14px] text-ink-600 dark:text-ink-400 hover:text-accent transition-colors"
           >
             <Mail size={15} className="text-accent" />
-            kamu@email.com
+            msyaifulaldiansyah@gmail.com
           </a>
           <a
-            href="https://github.com/username"
+            href="https://github.com/panipulisme"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center gap-3 text-[14px] text-ink-600 dark:text-ink-400 hover:text-accent transition-colors"
           >
             <Github size={15} className="text-accent" />
-            github.com/username
+            github.com/panipulisme
           </a>
         </div>
       </section>
