@@ -15,7 +15,7 @@ export default function Home() {
       {/* HERO */}
       <section className="pt-16 pb-12 border-b border-ink-100 dark:border-ink-800">
         <p className="text-[11px] font-medium tracking-widest uppercase text-ink-400 dark:text-ink-500 mb-4">
-          Digital Marketer · Statistika · Machine Learning
+          Digital Marketer · Statistika · Machine Learning · Creative Writings
         </p>
         <h1 className="text-[32px] sm:text-[40px] font-medium text-ink-900 dark:text-ink-50 leading-tight mb-4 tracking-tight">
           Halo, saya{" "}
